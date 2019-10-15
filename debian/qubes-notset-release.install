@@ -1,0 +1,2 @@
+etc/apt/sources.list.d/notset-qubes-r4.0.list
+etc/apt/trusted.gpg.d/notset-archive-keyring.gpg

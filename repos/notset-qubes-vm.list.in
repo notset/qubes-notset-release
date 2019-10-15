@@ -1,0 +1,11 @@
+# Main qubes updates repository
+deb [arch=amd64] https://mirror.notset.fr/qubes/repo/notset/deb/r@QUBESVER@/vm @DIST@ main
+#deb-src https://deb.qubes-os.org/r@QUBESVER@/vm @DIST@ main
+
+# Qubes updates candidates repository
+deb [arch=amd64] https://mirror.notset.fr/qubes/repo/notset/deb/r@QUBESVER@/vm @DIST@-testing main
+#deb-src https://deb.qubes-os.org/r@QUBESVER@/vm @DIST@-testing main
+
+# Qubes experimental/unstable repository
+deb [arch=amd64] https://mirror.notset.fr/qubes/repo/notset/deb/r@QUBESVER@/vm @DIST@-unstable main
+#deb-src https://deb.qubes-os.org/r@QUBESVER@/vm @DIST@-unstable main

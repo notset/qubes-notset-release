@@ -1,0 +1,39 @@
+Name:       notset-release-vm
+Version:    @VERSION@
+Release:    1
+Summary:    NOTSET Extra Packages for Qubes repository configuration
+
+Group:      System Environment/Base
+License:    GPL
+
+Source0:    %{name}-%{version}.tar.gz
+
+BuildArch:  noarch
+
+%description
+This package contains the NOTSET repository GPG key as well as configuration for yum.
+
+%prep
+%setup -q
+
+%build
+
+
+%install
+rm -rf $RPM_BUILD_ROOT
+sed -i 's/@QUBESVER@/@VERSION@/g' repos/notset-qubes-vm.repo
+make install-vm-rh DESTDIR=$RPM_BUILD_ROOT
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root,-)
+%config(noreplace) /etc/yum.repos.d/*
+/etc/pki/rpm-gpg/*
+
+%posttrans
+systemd-run --on-active=5min rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-notset
+
+%changelog
+@CHANGELOG@

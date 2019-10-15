@@ -1,0 +1,10 @@
+Source: qubes-notset-release
+Section: admin
+Priority: optional
+Maintainer: Frédéric Pierret <frederic.pierret@qubes-os.org>
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9~), quilt
+
+Package: qubes-notset-release
+Architecture: any
+Description: This package contains the NOTSET repository GPG key as well as configuration for APT. 
