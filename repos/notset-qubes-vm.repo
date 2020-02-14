@@ -1,3 +1,19 @@
+[notset-qubes-vm-current]
+name = NOTSET Qubes VM Repository (current)
+baseurl = https://mirror.notset.fr/qubes/repo/notset/yum/r@QUBESVER@/current/vm/@DIST@
+enabled = 0
+metadata_expire = 7d
+gpgcheck = 1
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-notset
+
+[notset-qubes-vm-current-testing]
+name = NOTSET Qubes VM Repository (current-testing)
+baseurl = https://mirror.notset.fr/qubes/repo/notset/yum/r@QUBESVER@/current-testing/vm/@DIST@
+enabled = 0
+metadata_expire = 7d
+gpgcheck = 1
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-notset
+
 [notset-qubes-vm]
 name = NOTSET Qubes VM Repository (unstable)
 baseurl = https://mirror.notset.fr/qubes/repo/notset/yum/r@QUBESVER@/unstable/vm/@DIST@
